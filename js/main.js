@@ -76,14 +76,14 @@ function headerHTML(active) {
     ["schools.html", "For Schools", "schools"],
     ["index.html#method", "Our Method", "method"],
     ["index.html#how", "How It Works", "how"],
-    ["index.html#founder", "About", "about"],
+    ["https://amrita-portfolio-wine.vercel.app/", "About", "about"],
   ];
   return `
   <header class="site-header">
     <div class="container nav">
       ${LOGO()}
       <nav class="nav-links" aria-label="Main">
-        ${links.map(([h, t, k]) => `<a href="${h}" class="${k === active ? "active" : ""}">${t}</a>`).join("")}
+        ${links.map(([h, t, k]) => `<a href="${h}" class="${k === active ? "active" : ""}"${h.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${t}</a>`).join("")}
       </nav>
       <a class="btn btn--navy nav-cta" href="schools.html#contact">Bring Career Discovery to Your School <i data-icon="arrow"></i></a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -104,7 +104,7 @@ function footerHTML() {
           <li><a href="students.html">For Students</a></li><li><a href="parents.html">For Parents</a></li><li><a href="schools.html">For Schools</a></li>
         </ul></div>
         <div><h5>Company</h5><ul>
-          <li><a href="index.html#method">Our Method</a></li><li><a href="index.html#founder">Founder's Story</a></li><li><a href="index.html#stories">Stories</a></li>
+          <li><a href="index.html#method">Our Method</a></li><li><a href="https://amrita-portfolio-wine.vercel.app/" target="_blank" rel="noopener">About the Founder</a></li><li><a href="index.html#stories">Stories</a></li>
         </ul></div>
         <div><h5>Get in touch</h5><ul>
           <li><a href="schools.html#contact">Book a school demo</a></li><li><a href="mailto:hello@mycareerdna.in">hello@mycareerdna.in</a></li><li>India</li>
