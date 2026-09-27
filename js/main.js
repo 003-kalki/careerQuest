@@ -56,15 +56,11 @@ function renderIcons(root = document) {
 }
 
 const LOGO_SVG = `
-<svg viewBox="0 0 64 64" aria-hidden="true">
-  <defs>
-    <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#22c3e6"/><stop offset=".5" stop-color="#6d5dfc"/><stop offset="1" stop-color="#a855f7"/>
-    </linearGradient>
-  </defs>
-  <path d="M32 2 C34 22 42 30 62 32 C42 34 34 42 32 62 C30 42 22 34 2 32 C22 30 30 22 32 2Z" fill="url(#lg1)"/>
-  <path d="M32 14 C33 26 38 31 50 32 C38 33 33 38 32 50 C31 38 26 33 14 32 C26 31 31 26 32 14Z" fill="#fff" opacity=".25"/>
-  <circle cx="50" cy="12" r="2.2" fill="#6d5dfc"/><circle cx="13" cy="50" r="1.8" fill="#22c3e6"/>
+<svg viewBox="0 0 48 48" aria-hidden="true">
+  <rect width="48" height="48" rx="14" fill="#14213d"/>
+  <path d="M16 9c0 10 16 10 16 15s-16 5-16 15" fill="none" stroke="#9b7bff" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M32 9c0 10-16 10-16 15s16 5 16 15" fill="none" stroke="#2dd4bf" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M19 14h10M19 34h10" stroke="#f59e0b" stroke-width="2.4" stroke-linecap="round"/>
 </svg>`;
 
 const LOGO = (href = "index.html") => `
@@ -89,7 +85,7 @@ function headerHTML(active) {
       <nav class="nav-links" aria-label="Main">
         ${links.map(([h, t, k]) => `<a href="${h}" class="${k === active ? "active" : ""}">${t}</a>`).join("")}
       </nav>
-      <a class="btn btn--purple nav-cta" href="schools.html#contact">Bring Career Discovery to Your School <i data-icon="arrow"></i></a>
+      <a class="btn btn--navy nav-cta" href="schools.html#contact">Bring Career Discovery to Your School <i data-icon="arrow"></i></a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>`;

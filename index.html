@@ -7,83 +7,95 @@
   <meta name="description" content="Career discovery for students, clarity for parents, structured guidance for schools." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Caveat:wght@500;600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body data-page="home" id="top">
 
 <!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-art" role="img" aria-label="Student looking at floating islands representing different career worlds"></div>
-  <div class="container">
-    <div class="hero-copy">
-      <div class="eyebrow">A brighter future starts with self-discovery</div>
-      <h1>Your future is <span class="grad">bigger</span> than your marks.</h1>
+<section class="hero2">
+  <div class="container hero2-grid">
+    <div>
+      <span class="pill-eyebrow"><b>NEW</b> Career discovery for grades 8–12</span>
+      <h1>Your future is <span class="serif">bigger<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 50 4, 120 4, 197 10" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span> than your marks.</h1>
       <p class="lead">Discover how you think, what drives you, where your strengths lie — and where they could take you.</p>
 
-      <div class="chooser-label">Who are you exploring for?</div>
-      <div class="chooser">
-        <a class="choice choice--student" href="students.html">
-          <span class="ic"><i data-icon="cap"></i></span>
-          <span><strong>I'm a Student</strong><small>Discover myself <i data-icon="arrow"></i></small></span>
-        </a>
-        <a class="choice choice--parent" href="parents.html">
-          <span class="ic"><i data-icon="family"></i></span>
-          <span><strong>I'm a Parent</strong><small>Understand my child <i data-icon="arrow"></i></small></span>
-        </a>
-        <a class="choice choice--school" href="schools.html">
-          <span class="ic"><i data-icon="school"></i></span>
-          <span><strong>I'm a School</strong><small>Guide my students <i data-icon="arrow"></i></small></span>
-        </a>
+      <div class="switch-wrap">
+        <div class="switch-label">I'm exploring as a
+          <div class="seg" role="tablist" aria-label="Choose who you are">
+            <span class="thumb"></span>
+            <button role="tab" data-aud="student" aria-selected="true">Student</button>
+            <button role="tab" data-aud="parent" aria-selected="false">Parent</button>
+            <button role="tab" data-aud="school" aria-selected="false">School</button>
+          </div>
+        </div>
+        <div class="preview" id="aud-preview" aria-live="polite"></div>
       </div>
+    </div>
+
+    <div class="helix-stage" aria-label="Your CareerDNA: five dimensions woven together">
+      <svg class="helix" id="helix" viewBox="0 0 460 560" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+      <div class="helix-card h1" style="--c:#6d4aff"><span class="dot"><i data-icon="heart"></i></span><div>Interests<small>What energises you</small></div></div>
+      <div class="helix-card h2" style="--c:#12a594"><span class="dot"><i data-icon="user"></i></span><div>Personality<small>How you work</small></div></div>
+      <div class="helix-card h3" style="--c:#f59e0b"><span class="dot"><i data-icon="puzzle"></i></span><div>Aptitude<small>Where you're strong</small></div></div>
+      <div class="helix-card h4" style="--c:#2563eb"><span class="dot"><i data-icon="scale"></i></span><div>Values<small>What matters to you</small></div></div>
+      <div class="helix-card h5" style="--c:#f2545b"><span class="dot"><i data-icon="book"></i></span><div>Learning style<small>How you learn best</small></div></div>
+      <div class="helix-result"><b>= Your CareerDNA</b><div class="tags"><span>Design</span><span>Tech</span><span>Research</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- ================= AUDIENCE CARDS ================= -->
-<section class="section" style="padding-top:56px">
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>Architect</span><span>Data Scientist</span><span>Psychologist</span><span>UX Designer</span><span>Marine Biologist</span><span>Chartered Accountant</span><span>Game Developer</span><span>Journalist</span><span>Civil Servant</span><span>Aerospace Engineer</span><span>Chef</span><span>Doctor</span><span>Entrepreneur</span><span>Animator</span>
+    <span>Architect</span><span>Data Scientist</span><span>Psychologist</span><span>UX Designer</span><span>Marine Biologist</span><span>Chartered Accountant</span><span>Game Developer</span><span>Journalist</span><span>Civil Servant</span><span>Aerospace Engineer</span><span>Chef</span><span>Doctor</span><span>Entrepreneur</span><span>Animator</span>
+  </div>
+</div>
+
+<!-- ================= AUDIENCE BENTO ================= -->
+<section class="section">
   <div class="container">
-    <div class="aud-grid">
-      <article class="aud-card aud-card--student reveal">
-        <div class="aud-top">
-          <div class="aud-photo" style="background-image:url(assets/student.jpg)"></div>
-          <div class="aud-body">
-            <div class="eyebrow"><i data-icon="cap"></i> For Students</div>
-            <h3>Explore your interests. Discover your strengths.</h3>
-            <p>Experience an interactive journey to uncover career worlds that fit you.</p>
-            <a class="btn btn--purple" href="students.html">Start Your Journey <i data-icon="arrow"></i></a>
-          </div>
-        </div>
-        <div class="aud-feats"><span><i data-icon="planet"></i>3D Career Universe</span><span><i data-icon="gamepad"></i>Interactive Challenges</span><span><i data-icon="user"></i>Personalized Profile</span></div>
-      </article>
-
-      <article class="aud-card aud-card--parent reveal">
-        <div class="aud-top">
-          <div class="aud-photo" style="background-image:url(assets/parent.jpg)"></div>
-          <div class="aud-body">
-            <div class="eyebrow"><i data-icon="family"></i> For Parents</div>
-            <h3>Understand your child beyond marks.</h3>
-            <p>Get insights into their interests, strengths, personality and potential.</p>
-            <a class="btn btn--teal" href="parents.html">Try the 2-Minute Parent Mirror <i data-icon="arrow"></i></a>
-          </div>
-        </div>
-        <div class="aud-feats"><span><i data-icon="brain"></i>5 Key Dimensions</span><span><i data-icon="heart"></i>Parent Insights</span><span><i data-icon="chat"></i>Conversation Guide</span></div>
-      </article>
-
-      <article class="aud-card aud-card--school reveal">
-        <div class="aud-top">
-          <div class="aud-photo" style="background-image:url(assets/school.jpg)"></div>
-          <div class="aud-body">
-            <div class="eyebrow"><i data-icon="school"></i> For Schools</div>
-            <h3>Turn career guidance into a school-wide discovery experience.</h3>
-            <p>Give every student the right insights, and help your counsellors make greater impact.</p>
-            <a class="btn btn--orange" href="schools.html">Bring This to Your School <i data-icon="arrow"></i></a>
-          </div>
-        </div>
-        <div class="aud-feats"><span><i data-icon="user"></i>Student Profiles</span><span><i data-icon="chart"></i>Counsellor Dashboard</span><span><i data-icon="users"></i>Cohort Insights</span></div>
-      </article>
+    <div class="section-head reveal">
+      <div class="eyebrow">Three ways in</div>
+      <h2>Built for the student. Trusted by parents. Ready for schools.</h2>
     </div>
-    <div class="tagline-divider hand">Better insights. Brighter futures.</div>
+    <div class="bento">
+      <a class="tile tile--student reveal" href="students.html">
+        <span class="num">01</span>
+        <span class="tag"><i data-icon="cap"></i> For students</span>
+        <h3>Explore your interests. Discover your strengths.</h3>
+        <p>An interactive journey through challenges and career worlds that fit you — not a boring form.</p>
+        <div class="tile-links"><span>3D Career Universe</span><span>Interactive challenges</span><span>Personal profile</span></div>
+        <span class="btn btn--purple">Start your journey <i data-icon="arrow"></i></span>
+        <div class="arch" style="background-image:url(assets/student.jpg)"></div>
+      </a>
+      <a class="tile tile--parent reveal" href="parents.html">
+        <span class="num">02</span>
+        <div class="tile-side">
+          <div>
+            <span class="tag"><i data-icon="family"></i> For parents</span>
+            <h3>Understand your child beyond marks.</h3>
+            <p>Clear insight into their interests, strengths, personality and potential.</p>
+            <div class="tile-links"><span>5 key dimensions</span><span>Parent Mirror</span><span>Conversation guide</span></div>
+            <span class="btn btn--teal">Try the 2-minute Parent Mirror <i data-icon="arrow"></i></span>
+          </div>
+          <div class="circle" style="background-image:url(assets/parent.jpg)"></div>
+        </div>
+      </a>
+      <a class="tile tile--school reveal" href="schools.html">
+        <span class="num">03</span>
+        <div class="tile-side">
+          <div>
+            <span class="tag"><i data-icon="school"></i> For schools</span>
+            <h3>Career guidance as a school-wide experience.</h3>
+            <p>Every student gets insight; every counsellor gets more impact.</p>
+            <div class="tile-links"><span>Student profiles</span><span>Counsellor dashboard</span><span>Cohort insights</span></div>
+            <span class="btn btn--orange">Bring it to your school <i data-icon="arrow"></i></span>
+          </div>
+          <div class="circle" style="background-image:url(assets/school.jpg)"></div>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -426,5 +438,6 @@
 </section>
 
 <script src="js/main.js"></script>
+<script src="js/home.js"></script>
 </body>
 </html>
